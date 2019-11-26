@@ -1,15 +1,14 @@
+require_relative 'player.rb'
 
-
-class Smart_Player
+class Smart_Player < Player
   def initialize(name,oracle,range)
-    @name = name
-    @oracle = oracle
-    @range = range
+    super(name,oracle,range)
     @lower_end = 1
   end
 
   def guess
     player_guess = (@range + @lower_end)/2
+    @no_of_guesses += 1
     puts "Range is: #{@lower_end}..#{@range}"
     if @oracle.is_it?(player_guess) == true
       puts "#{@name} guessed #{player_guess} and won!"

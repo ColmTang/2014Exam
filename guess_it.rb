@@ -23,5 +23,7 @@ class Guess_It
         finished = true
       end
     end
+    puts "#{@player_r.name} made #{@player_r.no_of_guesses}"
+    puts "#{@player_s.name} made #{@player_s.no_of_guesses}"
   end
 end
