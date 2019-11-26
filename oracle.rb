@@ -7,6 +7,12 @@ class Oracle
   end
 
   def is_it?(guess)
-    @secret == guess
+    if @secret > guess
+      "secret is higher than guess"
+    elsif @secret < guess
+      "secret is lower than guess"
+    else
+      @secret == guess
+    end
   end
 end
