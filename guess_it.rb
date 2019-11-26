@@ -1,7 +1,7 @@
 require_relative 'oracle.rb'
 require_relative 'random_player.rb'
 require_relative 'smart_player.rb'
-require_relative 'sequential_player.rb'
+require_relative 'sequential_player.rb' 
 
 class Guess_It
   def initialize
