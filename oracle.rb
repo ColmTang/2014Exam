@@ -3,7 +3,7 @@
 class Oracle
   attr_reader :secret
   def initialize(range)
-    @secret = rand(1..range)
+    @secret = rand(1..100)
   end
 
   def is_it?(guess)

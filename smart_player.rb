@@ -13,6 +13,10 @@ class Smart_Player < Player
     if @oracle.is_it?(player_guess) == true
       puts "#{@name} guessed #{player_guess} and won!"
       true
+    elsif (@oracle.is_it?(player_guess) == "secret is higher than guess") && (player_guess == 99)
+      puts "#{@name} guessed #{player_guess}"
+      @lower_end += 1
+      false
     elsif @oracle.is_it?(player_guess) == "secret is higher than guess"
       puts "#{@name} guessed #{player_guess}"
       @lower_end = player_guess
